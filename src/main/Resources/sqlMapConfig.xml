@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"></property>
+                <property name="url" value="jdbc:mysql://localhost:3306/mybatis?characterEncoding=utf-8"></property>
+                <property name="username" value="root"></property>
+                <property name="password" value="root"></property>
+
+
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper resource="com/itheima/mapper/UserMapper.xml"></mapper>
+        <mapper class="com.itheima.mapper.UserMapper2"></mapper>
+    </mappers>
+
+</configuration>
