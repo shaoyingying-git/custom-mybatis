@@ -40,5 +40,6 @@ public class MybatisTest {
         sqlSession.close();
         is.close();
 
+
     }
 }

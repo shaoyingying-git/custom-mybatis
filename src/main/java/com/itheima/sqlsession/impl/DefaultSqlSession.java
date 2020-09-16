@@ -3,7 +3,6 @@ package com.itheima.sqlsession.impl;
 import com.itheima.sqlsession.Configuration;
 import com.itheima.sqlsession.SqlSession;
 import com.itheima.sqlsession.utils.Converter;
-import sun.security.provider.MD2;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

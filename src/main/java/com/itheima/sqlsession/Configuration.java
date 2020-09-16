@@ -21,7 +21,7 @@ public class Configuration implements Serializable {
     private String username;
     private String password;
     private HashMap<String, Mapper> map;
-    private ComboPooledDataSource dataSource;
+    private DataSource dataSource;
     private Connection connection;
 
     public DataSource getDataSource() {
@@ -39,9 +39,10 @@ public class Configuration implements Serializable {
     }
 
     public Connection getConnection() {
-        dataSource = (ComboPooledDataSource) getDataSource();
+        dataSource = getDataSource();
         try {
-            return dataSource.getConnection();
+            connection=dataSource.getConnection();
+            return connection;
         } catch (SQLException e) {
             e.printStackTrace();
             throw new RuntimeException(e.getMessage());
